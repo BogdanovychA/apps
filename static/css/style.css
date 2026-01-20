@@ -1,0 +1,193 @@
+/* Основні налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #a8c5d1 0%, #b8d4e0 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Контейнер */
+.container {
+    background: linear-gradient(135deg, #e8f0f5 0%, #f0f4f8 100%);
+    border-radius: 30px;
+    padding: 60px;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #6b7280;
+}
+
+/* Сітка карток */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Логотипи проєктів */
+.icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.card-subtitle {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 20px;
+}
+
+/* Кнопки платформ (SVG іконки всередині карток) */
+.platform-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.platform-icon {
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.platform-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.platform-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* Кольори брендів */
+.appstore { background-color: #000; }
+.playstore { background-color: #34a853; }
+.github { background-color: #333; }
+.web { background-color: #4285f4; }
+
+/* Футер */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 30px;
+}
+
+.footer-links a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover { color: #1a1a2e; }
+
+.social-icons {
+    display: flex;
+    gap: 12px; /* Трохи щільніше для багатьох іконок */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(148, 163, 184, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a2e;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 10px;
+}
+
+.social-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.social-icon:hover {
+    background: #1a1a2e;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(26, 26, 46, 0.2);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .container { padding: 30px; }
+    .header h1 { font-size: 2rem; }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+    .footer { flex-direction: column; gap: 25px; text-align: center; }
+    .social-icons { justify-content: center; }
+}
