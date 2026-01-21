@@ -1,14 +1,18 @@
-from flask import Flask
-from flask import render_template
+from datetime import datetime
+
+from flask import Flask, render_template
+
+from data import index_ua, root
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
-    return render_template('index.html')
-
-
-# @app.route('/hello/')
-# @app.route('/hello/<name>')
-# def hello(name=None):
-#     return render_template('hello.html', person=name)
+    return render_template(
+        'index_ua.html',
+        header=index_ua.header,
+        apps=index_ua.apps,
+        footer=root.footer,
+        now=datetime.now(),
+    )
