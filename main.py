@@ -7,6 +7,11 @@ from data import index_ua, root
 app = Flask(__name__)
 
 
+@app.context_processor
+def inject_debug():
+    return dict(debug=app.debug)
+
+
 @app.route('/')
 def index():
     return render_template(
