@@ -1,5 +1,6 @@
 footer = {
     "home_page": "https://www.bogdanovych.org",
+    "privacy": "/privacy-policy",
     "facebook": "https://www.facebook.com/andrii.bogdanovych",
     "telegram": "https://t.me/a_bogdanovych",
     "instagram": "https://www.instagram.com/a_bogdanovych/",

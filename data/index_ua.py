@@ -22,7 +22,7 @@ apps = [
         "image": "mini-games-530x530.png",
         "url": "https://mini-games.bogdanovych.org",
         "links": {
-            "playstore": "https://play.google.com/store/apps/details?id=org.bogdanovych.minigames",
+            "playstore": "https://play.google.com/store/apps/details?id=org.foundation101.minigames",
             "appstore": "",
             "web": "https://mini-games.bogdanovych.org",
             "github": "https://github.com/BogdanovychA/bmg",
