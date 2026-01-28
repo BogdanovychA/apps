@@ -21,3 +21,8 @@ def index():
         footer=root.footer,
         now=datetime.now(),
     )
+
+
+@app.route('/privacy-policy')
+def privacy():
+    return render_template('privacy.html')
