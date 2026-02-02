@@ -7,11 +7,6 @@ from data import index_ua, root
 app = Flask(__name__)
 
 
-# @app.context_processor
-# def inject_debug():
-#     return dict(debug=app.debug)
-
-
 @app.context_processor
 def inject_globals():
     return dict(debug=app.debug, now=datetime.now())
@@ -41,6 +36,12 @@ def application(sub_url):
         app=selected_app,
         footer=root.footer,
     )
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    # e — це об'єкт помилки, який передає Flask
+    return render_template('404.html', header=index_ua.header, footer=root.footer), 404
 
 
 @app.route('/privacy-policy')
