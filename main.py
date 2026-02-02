@@ -1,15 +1,20 @@
 from datetime import datetime
 
-from flask import Flask, render_template
+from flask import Flask, abort, render_template
 
 from data import index_ua, root
 
 app = Flask(__name__)
 
 
+# @app.context_processor
+# def inject_debug():
+#     return dict(debug=app.debug)
+
+
 @app.context_processor
-def inject_debug():
-    return dict(debug=app.debug)
+def inject_globals():
+    return dict(debug=app.debug, now=datetime.now())
 
 
 @app.route('/')
@@ -19,7 +24,22 @@ def index():
         header=index_ua.header,
         apps=index_ua.apps,
         footer=root.footer,
-        now=datetime.now(),
+    )
+
+
+@app.route('/app/<sub_url>')
+def application(sub_url):
+
+    selected_app = index_ua.apps.get(sub_url)
+
+    if not selected_app:
+        abort(404)  # Покаже стандартну сторінку 404 замість помилки коду
+
+    return render_template(
+        'app_ua.html',
+        header=index_ua.header,
+        app=selected_app,
+        footer=root.footer,
     )
 
 

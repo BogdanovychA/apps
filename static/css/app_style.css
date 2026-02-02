@@ -1,0 +1,367 @@
+/* Основні налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #a8c5d1 0%, #b8d4e0 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Контейнер */
+.container {
+    background: linear-gradient(135deg, #e8f0f5 0%, #f0f4f8 100%);
+    border-radius: 30px;
+    padding: 60px;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Навігація назад */
+.back-nav {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.back-link:hover {
+    color: #1a1a2e;
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateX(-3px);
+}
+
+.back-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Хедер застосунку */
+.app-header {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    padding: 40px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.app-icon-large {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-icon-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.app-header-content {
+    flex: 1;
+}
+
+.app-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.app-subtitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+/* Бейджі платформ */
+.platform-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.platform-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.platform-badge svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.platform-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+/* Кольори платформ */
+.platform-badge.appstore { background-color: #000; }
+.platform-badge.playstore { background-color: #34a853; }
+.platform-badge.github { background-color: #333; }
+.platform-badge.web { background-color: #4285f4; }
+
+/* Основний контент */
+.app-content {
+    margin-bottom: 50px;
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+}
+
+/* Текст опису */
+.description-text {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    line-height: 1.8;
+    color: #374151;
+    font-size: 1.05rem;
+}
+
+.description-text p {
+    margin-bottom: 15px;
+}
+
+.description-text p:last-child {
+    margin-bottom: 0;
+}
+
+.description-text ul,
+.description-text ol {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.description-text li {
+    margin-bottom: 8px;
+}
+
+/* Сітка можливостей */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Галерея скріншотів */
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.screenshot-item {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.screenshot-item:hover {
+    transform: scale(1.02);
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Футер */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 30px;
+}
+
+.footer-links a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover { 
+    color: #1a1a2e; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(148, 163, 184, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a2e;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 10px;
+}
+
+.social-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.social-icon:hover {
+    background: #1a1a2e;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(26, 26, 46, 0.2);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .container { 
+        padding: 30px; 
+    }
+    
+    .app-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .app-icon-large {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+    }
+    
+    .app-header h1 { 
+        font-size: 1.8rem; 
+    }
+    
+    .platform-badges {
+        justify-content: center;
+    }
+    
+    .features-grid { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .screenshots-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer { 
+        flex-direction: column; 
+        gap: 25px; 
+        text-align: center; 
+    }
+    
+    .social-icons { 
+        justify-content: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .app-header {
+        padding: 20px;
+    }
+    
+    .description-text {
+        padding: 25px;
+        font-size: 1rem;
+    }
+    
+    .platform-badge {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+}
