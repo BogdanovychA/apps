@@ -13,7 +13,7 @@ def inject_globals():
 
 
 @app.route('/')
-def index():
+def page_index_ua():
     return render_template(
         'index_ua.html',
         header=index_ua.header,
@@ -23,12 +23,12 @@ def index():
 
 
 @app.route('/app/<sub_url>')
-def application(sub_url):
+def page_app(sub_url):
 
     selected_app = index_ua.apps.get(sub_url)
 
     if not selected_app:
-        abort(404)  # Покаже стандартну сторінку 404 замість помилки коду
+        abort(404)
 
     return render_template(
         'app_ua.html',
@@ -40,9 +40,10 @@ def application(sub_url):
 
 @app.errorhandler(404)
 def page_404(e):
-    return render_template('404.html', header=index_ua.header, footer=root.footer), 404
+    return render_template('404_ua.html', header=index_ua.header, footer=root.footer), 404
 
 
+@app.route('/en/privacy-policy')
 @app.route('/privacy-policy')
-def privacy():
-    return render_template('privacy.html')
+def page_privacy_en():
+    return render_template('privacy_en.html')
