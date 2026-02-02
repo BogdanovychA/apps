@@ -9,16 +9,16 @@ app = Flask(__name__)
 
 @app.context_processor
 def inject_globals():
-    return dict(debug=app.debug, now=datetime.now())
+    return dict(
+        debug=app.debug, now=datetime.now(), header=index_ua.header, footer=root.footer
+    )
 
 
 @app.route('/')
 def page_index_ua():
     return render_template(
         'index_ua.html',
-        header=index_ua.header,
         apps=index_ua.apps,
-        footer=root.footer,
     )
 
 
@@ -32,15 +32,16 @@ def page_app(sub_url):
 
     return render_template(
         'app_ua.html',
-        header=index_ua.header,
         app=selected_app,
-        footer=root.footer,
     )
 
 
 @app.errorhandler(404)
 def page_404(e):
-    return render_template('404_ua.html', header=index_ua.header, footer=root.footer), 404
+    return (
+        render_template('404_ua.html'),
+        404,
+    )
 
 
 @app.route('/en/privacy-policy')
