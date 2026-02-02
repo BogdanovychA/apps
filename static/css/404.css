@@ -1,0 +1,103 @@
+/* 404_style.css */
+.error-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.error-content {
+    max-width: 600px;
+    width: 100%;
+}
+
+.error-icon {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    color: #6b7280;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.error-icon svg {
+    width: 60px;
+    height: 60px;
+}
+
+.error-content h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.error-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.description-text {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    line-height: 1.8;
+    color: #374151;
+}
+
+/* Адаптивність для 404 */
+@media (max-width: 480px) {
+    .error-content h1 {
+        font-size: 3.5rem;
+    }
+    .error-icon {
+        width: 100px;
+        height: 100px;
+    }
+    .description-text {
+        padding: 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Додайте це до вашого 404.css */
+
+.error-actions .platform-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: #4285f4; /* Колір для класу .web */
+}
+
+.error-actions .platform-badge svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.error-actions .platform-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+    filter: brightness(1.1);
+}
+
+/* Прибираємо синій фон, якщо він раптом десь дублюється */
+.error-actions a {
+    background-image: none;
+}
+
+.app-subtitle { font-size: 1.1rem; color: #6b7280; margin-bottom: 25px; }
