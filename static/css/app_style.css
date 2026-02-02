@@ -365,3 +365,59 @@ body {
         padding: 8px 16px;
     }
 }
+
+/* Стилі для сторінки 404 */
+.error-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.error-content {
+    max-width: 600px;
+    width: 100%;
+}
+
+.error-icon {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    color: #6b7280;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.error-icon svg {
+    width: 60px;
+    height: 60px;
+}
+
+.error-content h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.error-actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* Адаптивність для 404 */
+@media (max-width: 480px) {
+    .error-content h1 {
+        font-size: 3.5rem;
+    }
+    .error-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
