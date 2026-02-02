@@ -15,7 +15,7 @@ def inject_globals():
 
 
 @app.route('/')
-def page_index_ua():
+def page_index():
     return render_template(
         'index_ua.html',
         apps=index_ua.apps,
@@ -45,5 +45,5 @@ def page_404(e):
 
 
 @app.route('/privacy-policy')
-def page_privacy_en():
+def page_privacy():
     return render_template('privacy_ua.html')
