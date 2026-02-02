@@ -44,7 +44,6 @@ def page_404(e):
     )
 
 
-@app.route('/en/privacy-policy')
 @app.route('/privacy-policy')
 def page_privacy_en():
-    return render_template('privacy_en.html')
+    return render_template('privacy_ua.html')
