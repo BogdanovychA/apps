@@ -1,0 +1,15 @@
+{% if not debug %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X67FQK23EM"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X67FQK23EM');
+</script>
+{% else %}
+<script>
+    console.log("Debug mode is ON. Analytics disabled.");
+</script>
+{% endif %}

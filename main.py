@@ -39,8 +39,7 @@ def application(sub_url):
 
 
 @app.errorhandler(404)
-def page_not_found(e):
-    # e — це об'єкт помилки, який передає Flask
+def page_404(e):
     return render_template('404.html', header=index_ua.header, footer=root.footer), 404
 
 
