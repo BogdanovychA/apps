@@ -83,6 +83,48 @@ body {
 }
 
 @media (max-width: 768px) {
-    .container { padding: 30px; }
-    .footer { flex-direction: column; gap: 25px; text-align: center; }
+    body {
+        padding: 15px;
+    }
+    
+    .container { 
+        padding: 25px;
+        border-radius: 20px;
+    }
+    
+    .footer { 
+        flex-direction: column; 
+        gap: 20px; 
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .footer {
+        padding-top: 15px;
+    }
 }

@@ -52,11 +52,65 @@
 }
 
 @media (max-width: 768px) {
+    .back-nav {
+        margin-bottom: 20px;
+    }
+    
+    .back-link {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+    
     .privacy-content {
         padding: 30px;
     }
+    
     .privacy-content h1 {
         font-size: 1.8rem;
+    }
+    
+    .privacy-content h2 {
+        font-size: 1.3rem;
+        margin-top: 25px;
+    }
+    
+    .privacy-content p,
+    .privacy-content li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-link {
+        font-size: 0.8rem;
+    }
+    
+    .privacy-content {
+        padding: 20px;
+    }
+    
+    .privacy-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .privacy-content .effective-date {
+        font-size: 0.85rem;
+        margin-bottom: 30px;
+    }
+    
+    .privacy-content h2 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .privacy-content p,
+    .privacy-content li {
+        font-size: 0.9rem;
+    }
+    
+    .privacy-content ul {
+        margin-left: 20px;
     }
 }
 
